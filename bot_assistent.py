@@ -73,7 +73,7 @@ class Record:  # Класс хранения информации о конта�
         birthday_str = str(self.birthday.value.strftime("%d.%m.%Y")) if self.birthday else 'Not specified'
         return f"Contact name: {self.name.value}, phones: {'; '.join(p.value for p in self.phones)}, birthday: {birthday_str}"
 
-class AddressBook(UserDict):  # Класс хранения и управления записями.
+class AddressBook(UserDict):  # Класс хранения и управления записями .
     def add_record(self, record):
         self.data[record.name.value] = record
 
